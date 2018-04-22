@@ -1,7 +1,11 @@
 const { getProfile, getRepos, countTotalStars } = require("./helpers");
 
-(async () => {
-  const riza = await getProfile("rizafahmi");
-  const hengki = await getProfile("hengkiardo");
-  console.log(riza.data.items, hengki.data.items);
-})();
+const riza = getProfile("rizafahmi");
+const hengki = getProfile("hengkiardo");
+
+Promise.all([riza, hengki]).then(([rizaProfile, hengkiProfile]) => {
+  console.log(
+    rizaProfile.data.items[0].login,
+    hengkiProfile.data.items[0].login
+  );
+});

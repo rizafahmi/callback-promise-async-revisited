@@ -5,6 +5,7 @@
   "author": "Riza Fahmi <rizafahmi@gmail.com> (https://rizafahmi.com/)",
   "license": "MIT",
   "dependencies": {
+    "axios": "0.18.0",
     "request": "2.85.0"
   }
 }
